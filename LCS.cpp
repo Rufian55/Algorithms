@@ -49,20 +49,21 @@ int LCS_DP(char *X, char *Y, int m, int n) {
 				L[i][j] = max(L[i - 1][j], L[i][j - 1]);
 		}
 	}
-	// Following code is used to print LCS
+
+	// Print LCS.
 	int index = L[m][n];
 
-	// Create a character array to store the lcs string
+	// Create a c-string to store the lcs string.
 	char lcs[index + 1];
-	lcs[index] = '\0'; // Set the terminating character
+	lcs[index] = '\0';
 
     // Start from the right-most-bottom-most corner and
     // one by one store characters in lcs[]
 	i = m;
 	j = n;
 	while (i > 0 && j > 0) {
-		// If current character in X[] and Y are same, then
-		// current character is part of LCS.
+		// If current char in X[] and Y[] are ==, then
+		// current char is part of LCS.
 		if (X[i - 1] == Y[j - 1]) {
 			lcs[index - 1] = X[i - 1];	// Put current character in result.
 			i--; j--; index--;			// Reduce values of i, j and index.
