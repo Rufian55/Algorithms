@@ -2,10 +2,10 @@
 *  Printing of the actual LCS.
 *  Compile: g++ LCS.cpp -o LCS -g -Wall -std=c++0x
 *--------------------------------------------------------------------*/
-#include<iostream>
-using std::cout;
 #include<cstring>
 using std::strlen;
+#include<iostream>
+using std::cout;
 
 // Prototypes.
 int max(int a, int b);
