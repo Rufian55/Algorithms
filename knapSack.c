@@ -1,11 +1,13 @@
-﻿/* Recursive Θ(2^n) and Dynamic Θ(nW) implementations of 0-1 Knapsack problem.
-*  Compile: gcc knapSack.c -o knapSack -g -Wall                */
+﻿/* Recursive Θ(2^n), Dynamic Θ(nW), and Greedy implementations of 0-1 Knapsack problem.
+*  Compile: gcc knapSack.c -o knapSack -g -Wall
+***************************************************************************************/
 #include<stdio.h>
+#include<stdlib.h>
 
 // Prototypes.
-int max(int a, int b);
 int knapSack(int capacity, int weight[], int value[], int n);
 int knapSackRecur(int capacity, int weight[], int value[], int n);
+int max(int a, int b);
 
 int main() {
 	int value[] = { 60, 100, 120 };
@@ -17,18 +19,12 @@ int main() {
 	return 0;
 }
 
-
-// Returns max of two ints.
-int max(int a, int b) {
-	return (a > b) ? a : b;
-}
-
 // Dynamic Programming solution for 0-1 Knapsack problem. Θ(nW) [Weight]
 int knapSack(int capacity, int weight[], int value[], int n){
 	int i, w;
 	int kSack[n + 1][capacity + 1];
 
-	// Build table K[][] bottom up.
+	// Build table kSack[][] bottom up.
 	for (i = 0; i <= n; i++) {
 		for (w = 0; w <= capacity; w++) {
 			if (i == 0 || w == 0)
@@ -59,4 +55,9 @@ int knapSackRecur(int capacity, int weight[], int value[], int n) {
 	else
 		return max(value[n - 1] + knapSackRecur(capacity - weight[n - 1], weight, value, n - 1),
 			  knapSackRecur(capacity, weight, value, n - 1));
+}
+
+// Returns max of two ints.
+int max(int a, int b) {
+	return (a > b) ? a : b;
 }
