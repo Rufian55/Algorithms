@@ -1,4 +1,4 @@
-// Returns the length of the longest palindromic subsequence in input string.
+﻿// Returns the length of the longest palindromic subsequence in input string.
 // Compile: gcc palSeq.cpp -o palSeq -g -Wall
 #include<stdio.h>
 #include<string.h>
@@ -16,7 +16,7 @@ int main() {
 	return 0;
 }
 
-// Returns the length of the longest palindromic subsequence (in table[][]).
+// Returns the length of the longest palindromic subsequence (in table[][]) Θ(n^2).
 int longestPalsequence(char *str) {
 	int n = strlen(str);
 	int i, j;

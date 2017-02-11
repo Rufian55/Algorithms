@@ -1,4 +1,4 @@
-﻿/* Recursive Θ(2^n), Dynamic Θ(nW), and Greedy implementations of 0-1 Knapsack problem.
+﻿/* Recursive Θ(2^n), Dynamic Θ(nW) implementations of 0-1 Knapsack problem.
 *  Compile: gcc knapSack.c -o knapSack -g -Wall
 ***************************************************************************************/
 #include<stdio.h>
