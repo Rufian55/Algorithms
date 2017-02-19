@@ -21,15 +21,15 @@ void printSolution(int dist[][V]);
 void floydWarshall(int graph[][V]);
 
 int main() {
-//			   Vertex # A  B  C  D  E  F  G  H	   Vertex
+//		     Vertex # A  B  C  D  E  F  G  H	Vertex
 	int graph[V][V] = { { 0, N, 4, N, N, 7, N, N }, // A
-					{ N, 0, N, N, 9, N, N, 3 }, // B
-					{ 4, N, 0, 3, N, 2, 9, N }, // C	
-					{ N, N, 3, 0, 3, N, 7, N }, // D
-					{ N, 9, N, 3, 0, N, 2, 7 }, // E
-					{ 7, N, 2, N, N, 0, 8, N }, // F
-					{ N, N, 9, 7, 2, 8, 0, 3 }, // G
-					{ N, 3, N, N, 7, N, 3, 0 } };//H
+			    { N, 0, N, N, 9, N, N, 3 }, // B
+			    { 4, N, 0, 3, N, 2, 9, N }, // C	
+			    { N, N, 3, 0, 3, N, 7, N }, // D
+			    { N, 9, N, 3, 0, N, 2, 7 }, // E
+			    { 7, N, 2, N, N, 0, 8, N }, // F
+			    { N, N, 9, 7, 2, 8, 0, 3 }, // G
+			    { N, 3, N, N, 7, N, 3, 0 } };//H
 
 	floydWarshall(graph);
 
@@ -49,7 +49,7 @@ void floydWarshall(int graph[][V]) {
 		for (i = 0; i < V; i++) {
 			for (j = 0; j < V; j++) {
 				// Avoid integer overflow.
-				if (dist[i][k] != INF &&	dist[k][j] != INF && dist[i][k] + dist[k][j] < dist[i][j])
+				if (dist[i][k] != INF && dist[k][j] != INF && dist[i][k] + dist[k][j] < dist[i][j])
 					dist[i][j] = dist[i][k] + dist[k][j];
 			}
 		}
