@@ -57,8 +57,8 @@ int cutRod(int n, int *price) {
     int q = 0;
     for (int i = 1; i <= n; i++) {
         q = max(q, price[i] + cutRod(n - i, price));
-	}
-	return q;
+    }
+    return q;
 }
 
 // Top-down recursive solution O(2^n).
