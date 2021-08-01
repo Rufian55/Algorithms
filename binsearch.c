@@ -30,16 +30,16 @@ void test() {
     int index = binsearch(hayStack, len, 4);
     assert(index == 1);
 
-	index = binsearch(hayStack, len, 2);
+    index = binsearch(hayStack, len, 2);
     assert(index == 0);
         
-	index = binsearch(hayStack, len, 10);
+    index = binsearch(hayStack, len, 10);
     assert(index == 4);
         
-	index = binsearch(hayStack, len, 14);
+    index = binsearch(hayStack, len, 14);
     assert(index == 6);
        
-	index = binsearch(hayStack, len, 28);
+    index = binsearch(hayStack, len, 28);
     assert(index == -1);
 }
 
