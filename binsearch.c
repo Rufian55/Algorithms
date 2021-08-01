@@ -1,45 +1,49 @@
+/*************************************************************
+* binsearch.c is the classic binary search algorithm. Returns
+* array index if found, -1 otherwise...
+**************************************************************/
 #include <stdio.h>
 #include <assert.h>
 
-int binsearch(int a[], int n, int x) {
-        int low = 0;
-        int high = n-1;
-        int mid;
-        while(low <= high)         {
-                mid = (low + high) / 2;
-                if(a[mid] == x) {
-                        return mid;
-                }
-                else if (x < a[mid]) {
-                        high = mid - 1;
-                }
-                else {
-                        low = mid + 1;
-                }
+int binsearch(int hayStack[], int length, int needle) {
+    int low = 0;
+    int high = length-1;
+    int mid;
+    while(low <= high) {
+        mid = (low + high) / 2;
+        if(hayStack[mid] == needle) {
+            return mid;
         }
-        return -1;
+        else if (needle < hayStack[mid]) {
+            high = mid - 1;
+        }
+        else {
+            low = mid + 1;
+        }
+    }
+    return -1;
 }
 
 void test() {
-        int a[7] = {2,4,6,8,10,12,14};
-        int element_index = binsearch(a,7,4);
-        assert(element_index == 1);
+    int hayStack[7] = { 2, 4, 6, 8, 10, 12, 14 };
+    int len = sizeof(hayStack) / sizeof(int);
+    int index = binsearch(hayStack, len, 4);
+    assert(index == 1);
 
-	   element_index = binsearch(a,7,2);
-        assert(element_index == 0);
+	index = binsearch(hayStack, len, 2);
+    assert(index == 0);
         
-	   element_index = binsearch(a,7,10);
-        assert(element_index == 4);
+	index = binsearch(hayStack, len, 10);
+    assert(index == 4);
         
-	   element_index = binsearch(a,7,14);
-        assert(element_index == 6);
-        
-	   element_index = binsearch(a,7,28);
-        assert(element_index == -1);
+	index = binsearch(hayStack, len, 14);
+    assert(index == 6);
+       
+	index = binsearch(hayStack, len, 28);
+    assert(index == -1);
 }
 
 int main() {
-        test();
-        return 0;
+    test();
+    return 0;
 }
-
