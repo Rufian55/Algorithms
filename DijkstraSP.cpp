@@ -94,7 +94,7 @@ void dijkstra(int graph[V][V], int src) {
                   // path tree or shortest distance from src to i is finalized.
     bool sptSet[V];
 
-    // Parent array to store shortest path tree
+    // Parent array to store shortest path tree.
     int parent[V];
 
     // Initialize all distances as INFINITE and stpSet[] as false
