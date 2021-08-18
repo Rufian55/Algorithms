@@ -29,7 +29,7 @@ int main() {
                          { 0, 0, 9, 7, 2, 8, 0, 3 },    //   G
                          { 0, 3, 0, 0, 7, 0, 3, 0 } };  //   H
 
-	for (int i = 0; i < V; i++) {
+    for (int i = 0; i < V; i++) {
         Dijkstra(graph2, i, solution);
     }
     char vertices[V] = { 'A','B','C','D','E','F','G','H' };
