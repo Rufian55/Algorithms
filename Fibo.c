@@ -13,14 +13,14 @@ int fib_2(int n);
 int fib_3(int n);
 
 int main(int argc, char **argv) {
-	if (argc != 2) {
-		printf("Usage: \"Fibo n\" where n = the sequence number you wish to see.\n");
-		exit(1);
-	}
-	int n = atoi(argv[1]);
-	printf("The Fibonacci number for sequence %d is %d\n", n, fib_1(n));
+    if (argc != 2) {
+        printf("Usage: \"Fibo n\" where n = the sequence number you wish to see.\n");
+        exit(1);
+    }
+    int n = atoi(argv[1]);
+    printf("The Fibonacci number for sequence %d is %d\n", n, fib_1(n));
 //	getchar();
-	return 0;
+    return 0;
 }
 
 
