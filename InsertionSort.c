@@ -10,8 +10,8 @@ int main() {
     int *arr;
 
 	while (userInput < 0) {
-		printf("Enter total elements to be sorted: ");
-		scanf("%d", &userInput);
+        printf("Enter total elements to be sorted: ");
+        scanf("%d", &userInput);
         if (userInput < 1) {
             printf("Sorry, input must be > 0.\n");
         }
