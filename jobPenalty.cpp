@@ -4,6 +4,7 @@
 * Compile g++ jobPenalty.cpp -o JobPenalty -g -Wall -std=c++0x
 *******************************************************************************/
 #include<iostream>
+using std::cout, std::endl;
 #include<vector>
 
 struct Job {
@@ -59,7 +60,7 @@ int main() {
     Job tasks[] = { Job(66, 3), Job(20, 2), Job(15,6), Job(14,1), Job(10,7), Job(9,0), Job(5,8), Job(4,4), Job(2,5) };
     Job* result = schedule(tasks, 9);
     for (int i = 0; i < 9; i++) {
-        std::cout << i << "-" << i + 1 << ": " << result[i].deadline << ", " << result[i].penalty << std::endl;
+        cout << i << "-" << i + 1 << ": " << result[i].deadline << ", " << result[i].penalty << endl;
     }
 
     delete[] result;
