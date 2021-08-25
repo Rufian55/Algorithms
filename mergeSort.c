@@ -6,6 +6,11 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+// Prototypes.
+void merge(int[], int, int, int);
+void mergeSort(int[], int, int);
+void printArray(int[], int);
+
 /* Merges two subarrays of arr[].
  * First subarray is arr[left ... middle]
  * Second subarray is arr[middle+1 ... right]. */
