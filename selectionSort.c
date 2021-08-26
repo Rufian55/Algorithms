@@ -1,3 +1,8 @@
+/**********************************************************************
+* selectionSort - you've seen it before.
+* Compile gcc selectionSort.c -o SelectionSort -g -Wall
+* TODO - dynamically allocate array[] to prevent segfault.
+**********************************************************************/
 #include <stdio.h>
 
 int main() {
@@ -6,7 +11,7 @@ int main() {
 	printf("Enter number of elements\n");
 	scanf("%d", &n);
 
-	printf("Enter %d integers\n", n);
+	printf("Enter %d integers, max of 100 otherwise SEGFAULT!\n", n);
 
 	for (c = 0; c < n; c++)
 		scanf("%d", &array[c]);
