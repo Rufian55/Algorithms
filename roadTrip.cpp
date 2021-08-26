@@ -1,3 +1,7 @@
+/************************************************************************
+* roadTrips.cpp - minimze the number of hotel stops while < max distance. 
+* Compile gcc roadTrip.cpp -o RoadTrip -g -Wall 
+*************************************************************************/
 #include<vector>
 #include<iostream>
 using std::vector;
