@@ -13,18 +13,23 @@ public int BinaryGap(int N) {
 
     for (int i = 0; i < bits.Length; i++) {
         if (bits[i] == '0') {
-            if (tempCount > 0) {
-                tempCount++;
+            if (tempCount > 0) { // it's the second or higher 0 encountered...
+                tempCount++;     // increment temp count.
             }
             else {
-                tempCount = 1;
+                tempCount = 1;   // it's the first 0.
             }
         }
         else {
-            tempCount = 0;
+            tempCount = 0;       // it's a 1, so reset tempCount.
         }
-        if (tempCount > length) length = tempCount;
-        if (bits[i] == '1' && length > bestLength) bestLength = length;
+        // Conditionally update current 0 length if tempCount better than current string length.
+        if (tempCount > length) 
+            length = tempCount;
+        // If a closing 1 and new length better than best length so far, update bestLength.
+        if (bits[i] == '1' && length > bestLength)
+            bestLength = length;
+    
     }
 
     return bestLength;
